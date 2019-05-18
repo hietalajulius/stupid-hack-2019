@@ -6,9 +6,9 @@ from content import random_negative
 import random
 import time
 
-cred = credentials.Certificate("junction-hack-project-firebase-adminsdk-34chl-6837f2085d.json")
+cred = credentials.Certificate("<token>")
 initialize = firebase_admin.initialize_app(cred,{
-    'databaseURL': 'https://junction-hack-project.firebaseio.com/'
+    'databaseURL': '<database url>'
 })
 
 

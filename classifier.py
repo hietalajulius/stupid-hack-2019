@@ -41,7 +41,7 @@ class Classifier(nn.Module):
 hidden_size = 128
 dictionary_size = 20000
 
-classifier_filename = '../dl_project/classifier_model.pth'
+classifier_filename = '<trained model url>'
 
 classifier = Classifier(dictionary_size, hidden_size)
 classifier.load_state_dict(torch.load(classifier_filename, map_location=lambda storage, loc: storage))
@@ -50,7 +50,7 @@ classifier = classifier.to(device)
 classifier.eval()
 
 
-word_df = pd.read_csv("../dl_project/data/words.csv",squeeze=True)
+word_df = pd.read_csv("<dictionary>",squeeze=True)
 index_word = {x:y for x,y in enumerate(word_df["0"])}
 word_index = {y:x for x,y in enumerate(word_df["0"])}
 
@@ -82,10 +82,6 @@ def replace(x):
 nlp = spacy.load('en',disable=['parser', 'tagger', 'ner'])
 
 def predict(sentence):
-
-
-
-
 	indices = indices_func(cleanString(sentence))
 
 	indices_tensor = torch.tensor(indices)

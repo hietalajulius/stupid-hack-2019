@@ -7,7 +7,6 @@ from classifier import predict
 
 
 
-
 keep = True
 def random_negative():
 	while (keep):
