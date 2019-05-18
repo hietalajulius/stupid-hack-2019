@@ -1,0 +1,42 @@
+<ActionBar class="action-bar">
+    <Label class="action-bar-title" text="Settings" class="font-weight-bold"></Label>
+    <ActionItem (tap)="onSaveButtonTap()" ios.position="left">
+        <Button text="Done" class="action-item text-center text-primary"></Button>
+    </ActionItem>
+</ActionBar>
+
+<GridLayout class="page p-t-15" rows="*, auto">
+
+    <ScrollView row="0">
+        <StackLayout>
+            <StackLayout class="m-x-15">
+                <Label text="Receive push" class="h2 text-center" textWrap="true"></Label>
+                <Label [text]="pushAdditionalText" class="h4 text-center" textWrap="true"></Label>
+            </StackLayout>
+            <Switch [(ngModel)]="pushIsChecked" (checkedChange)="onPushIsCheckedChange($event)" class="m-15 is-receiving-notifications-switch">
+                <Label text="Receive push" class="text-primary m-x-auto p-t-5" textWrap="true"></Label>
+            </Switch>
+
+            <StackLayout class="m-x-15">
+                <Label text="Interval" class="h2 text-center" textWrap="true"></Label>
+                <!-- <Label [text]="intervalAdditionalText" class="h4 text-center" textWrap="true"></Label> -->
+            </StackLayout>
+            <GridLayout class="m-15" rows="auto auto" columns="50 * 50">
+                <Label  row="1" col="0" text="Too little" textWrap="true" fontSize="15" class="icon"></Label>
+                <Slider row="1" col="1" [(ngModel)]="sliderValue" (valueChange)="onSliderChange()" minValue="0" maxValue="99"></Slider>
+                <Label  row="1" col="2" text="Too much" textWrap="true" fontSize="15" class="icon"></Label>
+            </GridLayout>
+        </StackLayout>
+    </ScrollView>
+
+    <!-- <StackLayout row="1" class="m-x-auto m-b-30">
+        <Button text="Let the facts roll" class="btn btn-active btn-outline btn-rounded-sm"
+            (tap)="onSaveButtonTap()"
+            [isEnabled]="isAnswerSelected"
+            [isUserInteractionEnabled]="settingsAreValid">
+        </Button>
+        <Label text="Skip" class="text-primary m-x-auto p-t-5"
+            (tap)="onSaveButtonTap(false)"></Label>
+    </StackLayout> -->
+
+</GridLayout>

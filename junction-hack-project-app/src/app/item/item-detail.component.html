@@ -1,0 +1,8 @@
+<ActionBar title="Juicy details" class="action-bar"></ActionBar>
+<FlexboxLayout flexDirection="column" class="page">
+    <FlexboxLayout class="m-15">
+        <Label class="h2" [text]="fact.message" textWrap="true"></Label>
+    </FlexboxLayout>
+    <!-- <Label class="h4" [text]="fact.url"></Label> -->
+    <Button text="Open in Wikipedia" (tap)="launch()"></Button>
+</FlexboxLayout>
