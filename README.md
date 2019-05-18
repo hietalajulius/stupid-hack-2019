@@ -12,3 +12,6 @@ There are multiple dependencies, which haven't been listed here yet ...
 Using Nativescript CLI `tns`:
 
 `tns run ios --device <DEVICE_ID>`
+
+## Running the server
+Run `python stupid_hack_server.py`on the CLI
