@@ -1,3 +1,5 @@
+![alt text](https://github.com/hietalajulius/stupid-hack-2019/blob/master/cover.gif)
+
 # stupid-hack-2019
 Junction stupid hack 2019
 
